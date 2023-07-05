@@ -24,8 +24,13 @@ Connect ground to the left of all buttons, you can do this by dedicating a colum
 The conenctions for the screen are seen below. 
 
 GND -> GND
+
 5V -> VCC
+
 A5 -> SCK/SCL
+
 A4 -> SDA
+
 ![image](https://github.com/ChobbyCode/Arduino-Game-Template/assets/100038952/7d0a16e6-1476-4097-8d09-b5c68d4bac44)
+
 image credit: miliohm https://www.youtube.com/@miliohm

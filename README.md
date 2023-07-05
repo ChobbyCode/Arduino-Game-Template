@@ -7,12 +7,25 @@ This is a template to make games on the Arduino Uno Rev 3.
 - An Arduino Uno Rev 3 (or any other interchangeable microcontroller)
 - 1x breadboard for soldering board
 - 6x Plunger Tactile Push Buttons
-- 1x oled display
+- 1x oled I2C display
 - 20x jumper cables male - male
 - Power Supply (could connect to computer)
 
 ## Connections
 
-On your breadboard start by placing 4 tactile buttons in a Up, Down, Left & Right manner. The buttons should not overlap into the same collum or this will cause connection issues later. This can be seen below.
+Start by placing the components on the bread board. This can be seen below.
 
-![image](https://github.com/ChobbyCode/Arduino-Game-Template/assets/100038952/b7ff79b5-4d83-4943-8c96-d57e073c3766)
+![image](https://github.com/ChobbyCode/Arduino-Game-Template/assets/100038952/4c409093-bbe5-4743-8f30-2a2f817c0953)
+
+Connects are as followed...
+
+Connect ground to the left of all buttons, you can do this by dedicating a column to the ground and taking from there when needed.
+
+The conenctions for the screen are seen below. 
+
+GND -> GND
+5V -> VCC
+A5 -> SCK/SCL
+A4 -> SDA
+![image](https://github.com/ChobbyCode/Arduino-Game-Template/assets/100038952/7d0a16e6-1476-4097-8d09-b5c68d4bac44)
+image credit: miliohm https://www.youtube.com/@miliohm

@@ -1,3 +1,5 @@
+#include "inputManager.h"
+
 // Oled screen definitions
 #include <SPI.h>
 #include <Wire.h>
@@ -9,24 +11,6 @@
 #define SCREEN_HEIGHT 64
 Adafruit_SSD1306 display(SCREEN_WIDTH,SCREEN_HEIGHT,&Wire,OLED_RESET);
 
-
-// Definitions for button inputs
-#define left 2
-#define up 3
-#define down 4
-#define right 5 
-#define a 6
-#define b 7 
-
-
-// Previous values of the buttons
-byte upPrev = 0;
-byte downPrev = 0;
-byte leftPrev = 0;
-byte rightPrev = 0;
-byte aPrev = 0;
-byte bPrev = 0;
-
 void setup() {
 
   // Starts the screen  
@@ -34,14 +18,39 @@ void setup() {
   display.fillScreen(0);
   display.display();
 
-  // Setups the inputs
-  pinMode(up,INPUT_PULLUP);
-  pinMode(down,INPUT_PULLUP);
-  pinMode(left,INPUT_PULLUP);
-  pinMode(right,INPUT_PULLUP);
-  pinMode(a,INPUT_PULLUP);
-  pinMode(b,INPUT_PULLUP);
+  Serial.begin(9600);
+
+  start();
 }
 
 void loop() {
+  checkInputs(); // Checks the inputs & if the statements are true then it runs the input functions
+  paint(); // Runs the paint function
 }
+
+byte playerX = 0;
+byte playerY = 0;
+
+void paint() {
+  // All rendering stuff to go here
+}
+
+// All Possible Input Types
+void aDown(){}
+void aPressed(){}
+void aReleased(){}
+void bDown(){}
+void bPressed(){}
+void bReleased(){}
+void upDown(){}
+void upPressed(){}
+void upReleased(){}
+void downDown(){}
+void downPressed(){}
+void downReleased(){}
+void leftDown(){}
+void leftPressed(){}
+void leftReleased(){}
+void rightDown(){}
+void rightPressed(){}
+void rightReleased(){}

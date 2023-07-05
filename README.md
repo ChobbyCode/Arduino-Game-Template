@@ -47,4 +47,13 @@ Theoretically if all connections are good then you are good to go.
 
 ## Using the code base
 
-(Write code then add docs here)
+The application will make a square move left, right, up & down based on what keys are pressed. This project is suppose to act as a demo to show you how to draw to a Oled I2C display, read inputs from buttons, and on how to act on those inputs to make changes to the screen.
+
+Remember to change your I2C port or the screen will not work & it will give a error. The 0x3C is what needs to be changed. You can also get the I2C port easily by running this program -> https://github.com/ChobbyCode/Oled-I2C-Screen-Port-Grabber
+
+![image](https://github.com/ChobbyCode/Arduino-Game-Template/assets/100038952/5b8a7db0-2d97-4448-ab74-2cd49b382955)
+
+
+You can see at the bottom of the main file there are a lot of unused functions. These are the input functions, these functions are called whenever a condition for that button is met, i.e. if a is held then aDown(){} is called.
+
+You should be able to work out how everything works from just reading it, if you are newer to cpp/c then I will explain it. The tabs on the top are there to keep most of the input boilerplate out of the way. The paint functions gets called when something new needs to be drawn to the screen. The input functions at the bottom of the main file are called when the input conditions are met which can be modified in inputManager.cpp. Most of the other code is explained by comments.

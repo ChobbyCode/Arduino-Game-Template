@@ -18,8 +18,7 @@ void setup() {
   display.fillScreen(0);
   display.display();
 
-  Serial.begin(9600);
-
+  // Button setup
   start();
 }
 
@@ -28,29 +27,53 @@ void loop() {
   paint(); // Runs the paint function
 }
 
+//Player Variables
 byte playerX = 0;
 byte playerY = 0;
 
 void paint() {
   // All rendering stuff to go here
+
+  //Clears the screen
+  display.fillScreen(0);
+
+  //Draws the player to the screen
+  display.fillRect(playerX, playerY, 10, 10, 1);
+
+  //Updates the screen
+  display.display();
 }
 
-// All Possible Input Types
+// All Possible Input Types. Down is whilst the button is pressed. Pressed is called once when the button is first pressed. Released is called once when the button is released
+
+void rightDown(){
+  playerX = playerX + 1;
+}
+
+void leftDown(){
+  playerX = playerX - 1;
+}
+
+void upDown(){
+  playerY = playerY - 1;
+}
+
+void downDown(){
+  playerY = playerY + 1;
+}
+
+//Below are all the unused input types. Which include single pressed and when released.
 void aDown(){}
 void aPressed(){}
 void aReleased(){}
 void bDown(){}
 void bPressed(){}
 void bReleased(){}
-void upDown(){}
 void upPressed(){}
 void upReleased(){}
-void downDown(){}
 void downPressed(){}
 void downReleased(){}
-void leftDown(){}
 void leftPressed(){}
 void leftReleased(){}
-void rightDown(){}
 void rightPressed(){}
 void rightReleased(){}

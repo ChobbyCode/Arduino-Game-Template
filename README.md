@@ -42,3 +42,7 @@ Digital input pin 2 will go to the left button, 3 will go to the up button, 4 wi
 Pin 6 will go to the A button, whilst 7 goes to  B button.
 
 Theoretically if all connections are good then you are good to go.
+
+## Using the code base
+
+(Write code then add docs here)

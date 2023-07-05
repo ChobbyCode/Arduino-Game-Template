@@ -35,6 +35,8 @@ A4 -> SDA
 
 image credit: miliohm https://www.youtube.com/@miliohm
 
+If you want a more detailed tutorial on the oled screen follow Miliohm's tutorial here -> https://www.youtube.com/watch?v=rxjIXVwgY50
+
 Moving on to the input buttons (control scheme), the cables should be plugged into the right of the buttons on the breadboard and not the left as we used them for the screen. 
 We are going to be using the digital input. There are six buttons so we are going to use six digital input pins, 2 through 7.
 

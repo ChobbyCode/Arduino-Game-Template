@@ -1,6 +1,8 @@
 # Arduino-Game-Template
 
-This is a template to make games on the Arduino Uno Rev 3.
+This is a template/tutorial to make games on the Arduino Uno Rev 3. 
+
+UPDATE/IMPORTANT: Remember to change the I2C port. It says it in the code too.
 
 ### You will need:
 
